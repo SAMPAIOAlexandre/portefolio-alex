@@ -1,0 +1,30 @@
+import { ReactNode } from "react";
+
+type TitleProps = {
+  children: ReactNode;
+  as?: "h1" | "h2" | "h3";
+  className?: string;
+};
+
+export function Title({ children, as = "h1", className = "" }: TitleProps) {
+  const Tag = as;
+
+  return (
+    <Tag className={`font-title font-bold text-3xl ${className}`}>
+      {children}
+    </Tag>
+  );
+}
+
+type ParagraphProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+export function Paragraph({ children, className = "" }: ParagraphProps) {
+  return (
+    <p className={`font-body text-base leading-relaxed ${className}`}>
+      {children}
+    </p>
+  );
+}
