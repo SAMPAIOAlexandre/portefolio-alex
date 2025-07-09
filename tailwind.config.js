@@ -19,7 +19,7 @@ module.exports = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
-        // ... autres couleurs
+        
       },
     },
   },

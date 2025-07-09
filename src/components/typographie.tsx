@@ -10,7 +10,7 @@ export function Title({ children, as = "h1", className = "" }: TitleProps) {
   const Tag = as;
 
   return (
-    <Tag className={`font-title font-bold text-3xl ${className}`}>
+    <Tag className={`font-title font-bold text-4xl ${className}`}>
       {children}
     </Tag>
   );

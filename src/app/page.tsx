@@ -1,22 +1,14 @@
 import Image from "next/image";
 import { Title, Paragraph } from "@/components/typographie";
-
+import { Header } from "@/components/header";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20  ">
+    <div >
+       <Header />
+       
        <main>
-      <Title>Bienvenue sur mon portfolio</Title>
-      <Paragraph>
-        Voici un exemple de paragraphe qui utilise automatiquement la bonne
-        police.
-      </Paragraph>
-<div className="bg-primary text-primary-foreground p-4 rounded shadow">
-  ✔ Couleur `bg-primary` OK !
-</div>
-<div className="bg-background text-foreground p-4">
-  ✅ Test couleur `bg-background`
-</div>
+      
 
     </main>
   
