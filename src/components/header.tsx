@@ -1,5 +1,6 @@
 import { Title, Paragraph } from "@/components/typographie";
 import { Section } from "@/components/section";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 import React from "react";
@@ -9,7 +10,6 @@ export const Header: React.FC = () => {
     <header>
       <div>
       <Section className="flex flex-row items-center justify-between gap-6  sm:flex-nowrap">
-        {/* Partie gauche : texte */}
         <div className="max-w-xl text-left">
           <Title as="h1">Alexandre SAMPAIO</Title>
           <Paragraph>
@@ -30,6 +30,7 @@ export const Header: React.FC = () => {
         </div>
       </Section>
       </div>
+
     </header>
   );
 };
