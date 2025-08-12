@@ -8,7 +8,7 @@ import React from "react";
 
 export const Projects: React.FC = () => {
   return ( 
-    <Section className="flex flex-col items-center justify-center gap-6">
+    <Section className="flex flex-col items-center justify-center gap-6 p-6">
       <Title as="h2">Mes Projets</Title>
       <Paragraph>
         Voici quelques-uns de mes projets récents. Chacun d&apos;eux reflète ma passion pour le développement web et mon engagement à créer des solutions innovantes.
