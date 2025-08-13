@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Project  } from '../../types/projects';
-
+import { Project } from "../../types/projects";
 
 interface ProjectCardProps extends Project {}
 
@@ -14,26 +13,29 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   tags,
 }) => {
   return (
-    <article className="rounded-lg border shadow hover:shadow-lg transition p-4 flex flex-col">
-      <div className="relative aspect-[16/9] mb-4">
+    <article className="flex flex-col rounded-lg border p-4 shadow transition hover:shadow-lg">
+      <div className="relative mb-4 aspect-[16/9]">
         <Image
           src={image.src}
           alt={image.alt}
           fill
-          className="object-cover rounded"
+          className="rounded object-cover"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <h3 className="mb-2 text-lg font-semibold">{title}</h3>
 
       {description && (
-        <p className="text-sm text-gray-600 mb-4">{description}</p>
+        <p className="mb-4 text-sm text-gray-600">{description}</p>
       )}
 
       {tech && (
-        <ul className="flex flex-wrap gap-2 mb-4">
+        <ul className="mb-4 flex flex-wrap gap-2">
           {tech.map((t) => (
-            <li key={t} className="px-2 py-1 text-xs bg-gray-200 rounded">
+            <li
+              key={t}
+              className="rounded bg-secondary px-2 py-1 text-xs text-secondary-foreground"
+            >
               {t}
             </li>
           ))}
@@ -46,7 +48,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             href={links.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="rounded bg-blue-500 px-3 py-1 text-sm text-white hover:bg-blue-600"
           >
             Demo
           </Link>
@@ -56,7 +58,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             href={links.code}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"
+            className="rounded bg-gray-800 px-3 py-1 text-sm text-white hover:bg-gray-900"
           >
             Code
           </Link>
@@ -64,9 +66,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {tags && tags.length > 0 && (
-        <div className="mt-4 flex gap-2 flex-wrap">
+        <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span key={tag} className="text-xs bg-gray-100 px-2 py-0.5 rounded">
+            <span
+              key={tag}
+              className="rounded bg-accent px-2 py-0.5 text-xs text-accent-foreground"
+            >
               {tag}
             </span>
           ))}
@@ -74,4 +79,4 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       )}
     </article>
   );
-}
+};

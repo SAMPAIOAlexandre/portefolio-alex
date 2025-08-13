@@ -1,20 +1,16 @@
 import Image from "next/image";
-import { Title, Paragraph } from "@/components/typographie";
 import { Header } from "@/components/header";
 import { Projects } from "@/components/Projects/projects";
 
 export default function Home() {
   return (
-    <div >
-       <Header />
-       <Projects />
+    <div>
+      <Header />
+      <Projects />
 
-       <main>
-      
+      <main></main>
 
-    </main>
-  
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center ">
+      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"

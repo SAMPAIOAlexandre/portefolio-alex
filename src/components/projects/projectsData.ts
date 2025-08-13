@@ -1,10 +1,10 @@
-import { Project  } from '../../types/projects';
-
+import { Project } from "../../types/projects";
 
 export const projectsData: Project[] = [
   {
     title: "Bot Discord ",
-    description: "Un bot Discord basé sur Node.js, servant à gérer son temps de travail et à améliorer la productivité grâce à la méthode pomodoros.",
+    description:
+      "Un bot Discord basé sur Node.js, servant à gérer son temps de travail et à améliorer la productivité grâce à la méthode pomodoros.",
     image: {
       src: "/projects/Pomodojo.png",
       alt: "Capture d'écran de mon portfolio",
@@ -17,9 +17,7 @@ export const projectsData: Project[] = [
       // demo: "https://mon-portfolio.com",
       code: "https://github.com/SAMPAIOAlexandre/DiscordPomodoro",
     },
-    tags: ["web", "node.js", "discord", "productivity"],
+    tags: ["Node.js", "Discord", "Productivity"],
     featured: true,
   },
-  
-  ]
-    
+];
