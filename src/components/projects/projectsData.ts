@@ -23,7 +23,7 @@ export const projectsData: Project[] = [
   {
     title: "Senior Love",
   description:
-      "Un site web de rencontre pour les seniors, développé avec Next.js et Tailwind CSS",
+      "Projet de fin de formation visant à créer un réseau social pour les seniors, facilitant la communication et le partage d'expériences pour les seniors.",
     image: {
       src: "/projects/SeniorLove.png",
       alt: "Capture d'écran de Senior Love",
