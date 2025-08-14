@@ -20,4 +20,23 @@ export const projectsData: Project[] = [
     tags: ["Node.js", "Discord", "Productivity"],
     featured: true,
   },
+  {
+    title: "Senior Love",
+  description:
+      "Un site web de rencontre pour les seniors, développé avec Next.js et Tailwind CSS",
+    image: {
+      src: "/projects/SeniorLove.png",
+      alt: "Capture d'écran de Senior Love",
+      width: 800,
+      height: 600,
+      priority: true,
+    },
+    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+    links: {
+      // demo: "https://senior-love.vercel.app",
+      code: "https://github.com/SAMPAIOAlexandre/SeniorLoveFront",
+    },
+    tags: ["Next.js", "Tailwind CSS", "TypeScript"],
+    featured: true, 
+  }
 ];
