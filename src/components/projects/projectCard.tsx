@@ -19,7 +19,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           src={image.src}
           alt={image.alt}
           fill
-          className="rounded object-cover"
+          className="rounded object-contain"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>

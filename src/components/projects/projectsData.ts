@@ -7,12 +7,12 @@ export const projectsData: Project[] = [
       "Un bot Discord basé sur Node.js, servant à gérer son temps de travail et à améliorer la productivité grâce à la méthode pomodoros.",
     image: {
       src: "/projects/Pomodojo.png",
-      alt: "Capture d'écran de mon portfolio",
+      alt: "Capture d'écran du logo du bot Pomodojo",
       width: 800,
       height: 600,
       priority: true,
     },
-    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+    tech: ["Discord.js", "Node.js", "JavaScript"],
     links: {
       // demo: "https://mon-portfolio.com",
       code: "https://github.com/SAMPAIOAlexandre/DiscordPomodoro",
@@ -25,18 +25,18 @@ export const projectsData: Project[] = [
   description:
       "Projet de fin de formation visant à créer un réseau social pour les seniors, facilitant la communication et le partage d'expériences pour les seniors.",
     image: {
-      src: "/projects/SeniorLove.png",
-      alt: "Capture d'écran de Senior Love",
+      src: "/projects/Senior-Love.webp",
+      alt: "Capture d'écran du logo Senior Love",
       width: 800,
       height: 600,
       priority: true,
     },
-    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+    tech: ["React", "Tailwind CSS", "TypeScript", "Node.js","Express", "PostgreSQL"],
     links: {
       // demo: "https://senior-love.vercel.app",
       code: "https://github.com/SAMPAIOAlexandre/SeniorLoveFront",
     },
-    tags: ["Next.js", "Tailwind CSS", "TypeScript"],
+    tags: ["React", "Tailwind CSS", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     featured: true, 
   }
 ];
