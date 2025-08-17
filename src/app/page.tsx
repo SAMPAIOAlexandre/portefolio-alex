@@ -5,12 +5,12 @@ import { Experiences } from "@/components/experiences/experiences";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <Projects />
-<Experiences />
-
-      <main></main>
+    <>
+      <main>
+        <Header />
+        <Projects />
+        <Experiences />
+      </main>
 
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
         <a
@@ -59,6 +59,6 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-    </div>
+    </>
   );
 }
