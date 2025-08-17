@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { Header } from "@/components/header";
 import { Projects } from "@/components/Projects/projects";
+import { Experiences } from "@/components/experiences/experiences";
 
 export default function Home() {
   return (
     <div>
       <Header />
       <Projects />
+<Experiences />
 
       <main></main>
 

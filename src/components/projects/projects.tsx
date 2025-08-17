@@ -1,4 +1,3 @@
-// src/components/Projects/Projects.tsx
 import { Title, Paragraph } from "@/components/typographie";
 import { Section } from "@/components/section";
 import { ProjectCard } from "@/components/projects/projectCard";
