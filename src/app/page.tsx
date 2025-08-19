@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Header } from "@/components/header";
 import { Projects } from "@/components/Projects/projects";
-import { Experiences } from "@/components/experiences/experiences";
+import { Experiences } from "@/components/experiences/experience";
 
 export default function Home() {
   return (
