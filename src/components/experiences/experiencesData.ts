@@ -1,30 +1,36 @@
 import { Experience } from "@/types/experiences";
 
+
 export const experiencesData: Experience[] = [
-  { 
-    title: "Développeur Web Junior",
-    description: "Développement d'applications web et mobile.",
+  {
+    id : 1,
+    title: "Développeur Web Frontend",
+    description:
+      "Développement d'applications web en utilisant React, TypeScript et Tailwind CSS.",
     image: {
-      src: "/experiences/developpeur-web-junior.jpg",
-      alt: "Image de développeur web junior",
+      src: "",
+      alt: "Image d'un développeur web frontend",
       width: 800,
       height: 600,
       priority: true,
     },
-    startDate: "2022-01-01",
-    endDate: "2023-01-01",
+    startDate: "Janvier 2022",
+    endDate: "Présent",
   },
   {
-    title: "Stagiaire Développeur Frontend",
-    description: "Conception et développement d'interfaces utilisateur.",
+    id : 2,
+    title: "Développeur Web Backend",
+    description:
+      "Création d'API RESTful avec Node.js et Express, gestion de bases de données avec PostgreSQL.",
     image: {
-      src: "/experiences/stagiaire-developpeur-frontend.jpg",
-      alt: "Image de stagiaire développeur frontend",
+      src: "",
+      alt: "Image d'un développeur web backend",
       width: 800,
       height: 600,
       priority: true,
     },
-    startDate: "2021-06-01",
-    endDate: "2021-12-01",
+    startDate: "Février 2021",
+    endDate: "Décembre 2021",
   },
-]
+];
+export default experiencesData;

@@ -4,10 +4,10 @@ import { Experience } from '@/types/experiences';
 import { Title, Paragraph } from '@/components/typographie';
 
 
-interface ExperienceItemProps extends Experience {}
+interface ExperienceItem extends Experience {}
 
 
-export const ExperienceItemProps: React.FC<ExperienceItemProps> = ({
+export const ExperienceItem: React.FC<ExperienceItem> = ({
   title,
   description,
   image,
