@@ -1,5 +1,5 @@
 export interface Experience {
-  id : number; 
+  id: number;
   title: string;
   description?: string;
   image: {
@@ -12,4 +12,3 @@ export interface Experience {
   startDate: string;
   endDate?: string;
 }
-

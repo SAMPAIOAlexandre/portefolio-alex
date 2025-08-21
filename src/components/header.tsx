@@ -1,6 +1,5 @@
 import { Title, Paragraph } from "@/components/typographie";
 import { Section } from "@/components/section";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 import React from "react";

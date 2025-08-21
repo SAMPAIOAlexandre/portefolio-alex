@@ -1,9 +1,8 @@
 import { Experience } from "@/types/experiences";
 
-
 export const experiencesData: Experience[] = [
   {
-    id : 1,
+    id: 1,
     title: "Développeur Web Frontend",
     description:
       "Développement d'applications web en utilisant React, TypeScript et Tailwind CSS.",
@@ -18,7 +17,7 @@ export const experiencesData: Experience[] = [
     endDate: "Présent",
   },
   {
-    id : 2,
+    id: 2,
     title: "Développeur Web Backend",
     description:
       "Création d'API RESTful avec Node.js et Express, gestion de bases de données avec PostgreSQL.",

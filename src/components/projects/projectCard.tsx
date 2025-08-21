@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-interface ProjectCardProps extends Project {}
+type ProjectCardProps = Project;
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,

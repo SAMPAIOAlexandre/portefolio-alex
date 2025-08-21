@@ -1,13 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import { Experience } from '@/types/experiences';
-import { Title, Paragraph } from '@/components/typographie';
+import React from "react";
+import Image from "next/image";
+import { Experience } from "@/types/experiences";
+import { Title, Paragraph } from "@/components/typographie";
 
+type ExperienceItemProps = Experience;
 
-interface ExperienceItem extends Experience {}
-
-
-export const ExperienceItem: React.FC<ExperienceItem> = ({
+export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   title,
   description,
   image,
@@ -27,7 +25,9 @@ export const ExperienceItem: React.FC<ExperienceItem> = ({
         />
       </div>
 
-      <Title as="h3" className="mb-2 text-lg font-semibold">{title}</Title>
+      <Title as="h3" className="mb-2 text-lg font-semibold">
+        {title}
+      </Title>
 
       {description && (
         <Paragraph className="mb-4 line-clamp-3 text-sm text-gray-600">
@@ -36,9 +36,8 @@ export const ExperienceItem: React.FC<ExperienceItem> = ({
       )}
 
       <div className="text-xs text-gray-500">
-        {startDate} - {endDate || 'Présent'}
+        {startDate} - {endDate || "Présent"}
       </div>
     </article>
   );
-}
-    
+};
