@@ -13,7 +13,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   endDate,
 }) => {
   return (
-    <article className="flex flex-col rounded-lg border p-4 shadow transition hover:shadow-lg">
+    <article className="grid grid-cols-[1fr_auto_auto] gap-4 items-start">
       <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded">
         <Image
           src={image.src}
