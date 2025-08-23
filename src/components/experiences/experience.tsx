@@ -12,10 +12,10 @@ export const Experiences: React.FC = () => {
         Voici un aperçu de mes expériences professionnelles. Chaque expérience a
         contribué à mon développement en tant que développeur web.
       </Paragraph>
-      
+
       <ol
         aria-label="Timeline des expériences"
-        className="relative border-l border-border pl-6"
+        className="border-border relative border-l pl-6"
       >
         {experiencesData.map((experience) => (
           <li key={experience.id} className="mb-8 last:mb-0">

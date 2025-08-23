@@ -1,7 +1,7 @@
 export interface Experience {
   id: number;
   title: string;
-  poste?:string;
+  poste?: string;
   description?: string;
   image: {
     src: string;
@@ -9,5 +9,5 @@ export interface Experience {
     priority?: boolean;
   };
   startDate: string;
-  endDate?: string | null
+  endDate?: string | null;
 }

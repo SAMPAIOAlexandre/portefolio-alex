@@ -4,7 +4,7 @@ export const experiencesData: Experience[] = [
   {
     id: 1,
     title: "Développeur Web Frontend",
-    poste:"Stagiaire",
+    poste: "Stagiaire",
     description:
       "Développement d'applications web en utilisant React, TypeScript et Tailwind CSS.",
     image: {
@@ -18,7 +18,7 @@ export const experiencesData: Experience[] = [
   {
     id: 2,
     title: "Développeur Web Backend",
-    poste:"Stagiaire",
+    poste: "Stagiaire",
     description:
       "Création d'API RESTful avec Node.js et Express, gestion de bases de données avec PostgreSQL.",
     image: {
