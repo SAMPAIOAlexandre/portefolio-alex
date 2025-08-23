@@ -8,6 +8,7 @@ type ExperienceItemProps = Experience;
 export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   title,
   description,
+  poste,
   image,
   startDate,
   endDate,
@@ -32,6 +33,12 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
       {description && (
         <Paragraph className="mb-4 line-clamp-3 text-sm text-gray-600">
           {description}
+        </Paragraph>
+      )}
+
+      {poste && (
+        <Paragraph className="mb-2 text-sm italic text-gray-500">
+          {poste}
         </Paragraph>
       )}
 
