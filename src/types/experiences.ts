@@ -1,15 +1,13 @@
 export interface Experience {
   id: number;
   title: string;
-  poste:string;
+  poste?:string;
   description?: string;
   image: {
     src: string;
     alt: string;
-    width?: number;
-    height?: number;
     priority?: boolean;
   };
   startDate: string;
-  endDate?: string;
+  endDate?: string | null
 }

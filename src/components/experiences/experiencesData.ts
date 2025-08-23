@@ -9,13 +9,11 @@ export const experiencesData: Experience[] = [
       "Développement d'applications web en utilisant React, TypeScript et Tailwind CSS.",
     image: {
       src: "/experiences/logo-laposte.webp",
-      alt: "Image d'un développeur web frontend",
-      width: 64,
-      height: 40,
+      alt: "logo de La Poste",
       priority: true,
     },
-    startDate: "Janvier 2022",
-    endDate: "Présent",
+    startDate: "2022-01",
+    endDate: null,
   },
   {
     id: 2,
@@ -25,13 +23,11 @@ export const experiencesData: Experience[] = [
       "Création d'API RESTful avec Node.js et Express, gestion de bases de données avec PostgreSQL.",
     image: {
       src: "/experiences/logo-laposte.webp",
-      alt: "Image d'un développeur web backend",
-      width: 64,
-      height: 40,
+      alt: "logo de La Poste",
       priority: true,
     },
-    startDate: "Février 2021",
-    endDate: "Décembre 2021",
+    startDate: "2021-06",
+    endDate: null,
   },
 ];
 export default experiencesData;
