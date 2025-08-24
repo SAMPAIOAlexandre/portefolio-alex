@@ -23,8 +23,8 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   const endLabel = endDate ? formatMonthYear(endDate) : "Présent";
 
   return (
-    <article className="grid grid-cols-[1fr_auto_11rem] items-start gap-4">
-      <div className="flex items-start gap-3">
+    <article className="grid grid-cols-[1fr_auto_11rem] items-start gap-5 sm:gap-6">
+      <div className="flex items-start gap-4">
         <div className="bg-card relative mt-1 h-12 w-12 rounded p-1">
           <Image
             src={image.src}
