@@ -14,46 +14,48 @@ function formatMonthYear(iso: string) {
 export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   title,
   poste,
-  // description,
   image,
   startDate,
   endDate,
 }) => {
-  const startLabel = formatMonthYear(startDate);
-  const endLabel = endDate ? formatMonthYear(endDate) : "Présent";
+  const fmt = (iso: string) =>
+    new Date(iso.length === 7 ? `${iso}-01` : iso)
+      .toLocaleDateString("fr-FR", { month: "short", year: "numeric" })
+      .replace(".", "");
+
+    const start = fmt(startDate);
+   const end = endDate ? fmt(endDate) : "Présent";
 
   return (
-    <article className="grid grid-cols-[1fr_auto_11rem] items-start gap-5 sm:gap-6">
-      <div className="flex items-start gap-4">
-        <div className="bg-card relative mt-1 h-12 w-12 rounded p-1">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            className="object-contain"
-            sizes="48px"
-            priority={image.priority}
-          />
+    <article className="pt-0.5 pb-8">
+      <div className="md:flex items-center justify-between gap-8">
+        <div className="flex gap-4">
+          <div className="relative h-12 w-12 rounded-full overflow-hidden bg-card border">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-contain"
+              sizes="48px"
+              priority={image.priority}
+            />
+          </div>
+
+          <div>
+            <Title as="h3" className="font-semibold text-base leading-tight">
+              {title}
+            </Title>
+            {poste && (
+              <Paragraph className="text-sm text-muted-foreground">
+                {poste}
+              </Paragraph>
+            )}
+          </div>
         </div>
-        <div>
-          <Title as="h3" className="text-base font-semibold leading-tight">
-            {title}
-          </Title>
-          {poste && (
-            <Paragraph className="text-muted-foreground mt-0.5 text-sm">
-              {poste}
-            </Paragraph>
-          )}
+
+        <div className="text-sm text-muted-foreground whitespace-nowrap lg:text-right lg:w-48 ml-[64px] md:ml-0 mt-2 md:mt-0">
+          {start}{" "}<span aria-hidden="true">—</span>{" "}{end}
         </div>
-      </div>
-      <div className="text-muted-foreground text-right text-sm">
-        <time dateTime={startDate}>{startLabel}</time>
-        <span aria-hidden="true"> — </span>
-        {endDate ? (
-          <time dateTime={endDate}>{endLabel}</time>
-        ) : (
-          <span>Présent</span>
-        )}
       </div>
     </article>
   );

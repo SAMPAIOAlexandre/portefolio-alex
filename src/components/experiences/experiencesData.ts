@@ -27,7 +27,7 @@ export const experiencesData: Experience[] = [
       priority: true,
     },
     startDate: "2021-06",
-    endDate: null,
+    endDate: "2021-12",
   },
 ];
 export default experiencesData;
