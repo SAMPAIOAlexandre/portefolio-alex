@@ -30,7 +30,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
     <article className="pt-0.5 pb-8">
       <div className="md:flex items-center justify-between gap-8">
         <div className="flex gap-4">
-          <div className="relative h-12 w-12 rounded-full overflow-hidden bg-card border">
+          <div className="relative h-12 w-12 rounded-full overflow-hidden bg-card ">
             <Image
               src={image.src}
               alt={image.alt}

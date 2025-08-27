@@ -14,8 +14,8 @@ export const Experiences: React.FC = () => {
           contribué à mon développement en tant que développeur web.
         </Paragraph>
       </div>
-
-      <ol aria-label="Timeline des expériences" className="relative w-full max-w-5xl mx-auto mt-8 flex flex-col items-center">
+      
+      <ol aria-label="Timeline des expériences" className="relative w-full max-w-5xl mx-auto flex flex-col items-center">
         {experiencesData.map((experience) => (
           <li key={experience.id} className="mb- last:mb-0 w-full flex justify-center">
             <ExperienceItem {...experience} />
