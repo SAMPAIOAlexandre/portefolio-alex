@@ -5,7 +5,7 @@ export const skillsData: Skill[] = [
     id: 1,
     title: "JavaScript",
     image: {
-      src: "/skills/javascript.png",
+      src: "/.png",
       alt: "Logo JavaScript",
     },
   },
@@ -13,7 +13,7 @@ export const skillsData: Skill[] = [
     id: 2,
     title: "TypeScript",
     image: {
-      src: "/skills/typescript.png",
+      src: "/.png",
       alt: "Logo TypeScript",
     },
   },
@@ -21,7 +21,7 @@ export const skillsData: Skill[] = [
     id: 3,
     title: "React",
     image: {
-      src: "/skills/react.png",
+      src: "/",
       alt: "Logo React",
     },
   },
@@ -29,7 +29,7 @@ export const skillsData: Skill[] = [
     id: 4,
     title: "Next.js",
     image: {
-      src: "/skills/nextjs.png",
+      src: "/",
       alt: "Logo Next.js",
     },
   },
@@ -37,7 +37,7 @@ export const skillsData: Skill[] = [
     id: 5,
     title: "Node.js",
     image: {
-      src: "/skills/nodejs.png",
+      src: "/",
       alt: "Logo Node.js",
     },
   },
@@ -45,7 +45,7 @@ export const skillsData: Skill[] = [
     id: 6,
     title: "Express.js",
     image: {
-      src: "/skills/expressjs.png",
+      src: "/png",
       alt: "Logo Express.js",
     },
   },
@@ -53,7 +53,7 @@ export const skillsData: Skill[] = [
     id: 7,
     title: "PostgreSQL",
     image: {
-      src: "/skills/postgresql.png",
+      src: "/.png",
       alt: "Logo PostgreSQL",
     },
   },
@@ -61,7 +61,7 @@ export const skillsData: Skill[] = [
     id: 8,
     title: "MongoDB",
     image: {
-      src: "/skills/mongodb.png",
+      src: "/g",
       alt: "Logo MongoDB",
     },
   },
@@ -69,7 +69,7 @@ export const skillsData: Skill[] = [
     id: 9,
     title: "Git",
     image: {
-      src: "/skills/git.png",
+      src: "/",      
       alt: "Logo Git",
     },
   },
@@ -77,7 +77,7 @@ export const skillsData: Skill[] = [
     id: 10,
     title: "Docker",
     image: {
-      src: "/skills/docker.png",
+      src: "/",
       alt: "Logo Docker",
     },
   },

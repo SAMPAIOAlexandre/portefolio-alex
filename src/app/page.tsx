@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Header } from "@/components/header";
 import { Projects } from "@/components/Projects/projects";
 import { Experiences } from "@/components/experiences/experience";
+import { Skills } from "@/components/skills/skills";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <Header />
         <Projects />
         <Experiences />
+        <Skills />
       </main>
 
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
