@@ -7,7 +7,7 @@ import React from "react";
 export const Header: React.FC = () => {
   return (
     <header>
-      <div>
+      <div className="hero-section">
         <Section className="flex flex-row items-center justify-between gap-6 sm:flex-nowrap">
           <div className="max-w-xl text-left">
             <Title as="h1">Alexandre SAMPAIO</Title>
