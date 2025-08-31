@@ -6,3 +6,10 @@ export interface Skill {
     alt: string;
   }
 }
+
+
+export interface SkillCategory {
+  id: number;
+  title: string;
+  skills: Skill[];
+}
