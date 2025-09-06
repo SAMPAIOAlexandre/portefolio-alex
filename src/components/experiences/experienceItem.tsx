@@ -23,14 +23,14 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
       .toLocaleDateString("fr-FR", { month: "short", year: "numeric" })
       .replace(".", "");
 
-    const start = fmt(startDate);
-   const end = endDate ? fmt(endDate) : "Présent";
+  const start = fmt(startDate);
+  const end = endDate ? fmt(endDate) : "Présent";
 
   return (
-    <article className="pt-0.5 pb-8">
-      <div className="md:flex items-center justify-between gap-8">
+    <article className="pb-8 pt-0.5">
+      <div className="items-center justify-between gap-8 md:flex">
         <div className="flex gap-4">
-          <div className="relative h-12 w-12 rounded-full overflow-hidden bg-card ">
+          <div className="bg-card relative h-12 w-12 overflow-hidden rounded-full">
             <Image
               src={image.src}
               alt={image.alt}
@@ -42,19 +42,19 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
           </div>
 
           <div>
-            <Title as="h3" className="font-semibold text-base leading-tight">
+            <Title as="h3" className="text-base font-semibold leading-tight">
               {title}
             </Title>
             {poste && (
-              <Paragraph className="text-sm text-muted-foreground">
+              <Paragraph className="text-muted-foreground text-sm">
                 {poste}
               </Paragraph>
             )}
           </div>
         </div>
 
-        <div className="text-sm text-muted-foreground whitespace-nowrap lg:text-right lg:w-48 ml-[64px] md:ml-0 mt-2 md:mt-0">
-          {start}{" "}<span aria-hidden="true">—</span>{" "}{end}
+        <div className="text-muted-foreground ml-[64px] mt-2 whitespace-nowrap text-sm md:ml-0 md:mt-0 lg:w-48 lg:text-right">
+          {start} <span aria-hidden="true">—</span> {end}
         </div>
       </div>
     </article>

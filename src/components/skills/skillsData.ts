@@ -4,6 +4,7 @@ export const skillsData: SkillCategory[] = [
   {
     id: 1,
     title: "Frontend",
+    color: "text-orange-500",
     skills: [
       {
         id: 1,
@@ -25,6 +26,7 @@ export const skillsData: SkillCategory[] = [
   {
     id: 2,
     title: "Backend",
+    color: "text-purple-500",
     skills: [
       {
         id: 4,
@@ -41,6 +43,7 @@ export const skillsData: SkillCategory[] = [
   {
     id: 3,
     title: "Bases de données",
+    color: "text-yellow-500",
     skills: [
       {
         id: 6,
@@ -54,15 +57,16 @@ export const skillsData: SkillCategory[] = [
       },
     ],
   },
-  { 
+  {
     id: 4,
-    title : "Outils",
+    title: "Outils",
+    color: "text-sky-500",
     skills: [
       {
         id: 8,
         title: "Git",
         image: { src: "/skills/git.svg", alt: "Logo Git" },
       },
-    ]
-    },
+    ],
+  },
 ];
