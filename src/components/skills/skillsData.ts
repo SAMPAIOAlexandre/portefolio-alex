@@ -54,4 +54,15 @@ export const skillsData: SkillCategory[] = [
       },
     ],
   },
+  { 
+    id: 4,
+    title : "Outils",
+    skills: [
+      {
+        id: 8,
+        title: "Git",
+        image: { src: "/skills/git.svg", alt: "Logo Git" },
+      },
+    ]
+    },
 ];
