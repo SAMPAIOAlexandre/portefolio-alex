@@ -3,6 +3,7 @@ import { Header } from "@/components/header";
 import { Projects } from "@/components/Projects/projects";
 import { Experiences } from "@/components/experiences/experience";
 import { Skills } from "@/components/skills/skills";
+import { Contact } from "@/components/contact/contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Projects />
         <Experiences />
         <Skills />
+        <Contact />
       </main>
 
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
