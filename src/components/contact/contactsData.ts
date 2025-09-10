@@ -1,28 +1,27 @@
 import { Contact } from './../../types/contact';
 
 
-export const contactsData: Contact[] = [
+export const contactMethods: Contact[] = [
   {
-    id: 1,
-    type: "Email",
-    value: "",
-    href: "",
-    ariaLabel: "Envoyer un email",
+    id: "email",
+    type: "email",
+    label: "Email",
+    value: "alexandre.sampaio@example.com",
+    iconName: "mail",
   },
   {
-    id: 2,
-    type: "LinkedIn",
-    value: "Mon LinkedIn",
-    href: "https://www.linkedin.com/in/votre-profil",
-    ariaLabel: "Voir mon profil LinkedIn",
+    id: "linkedin",
+    type: "linkedin",
+    label: "LinkedIn",
+    value: "https://www.linkedin.com/in/alexandre-sampaio",
+    iconName: "linkedin",
   },
   {
-    id: 3,
-    type: "GitHub",
-    value: "Mon GitHub",
-    href: "",
-    ariaLabel: "Voir mon profil GitHub",
+    id: "github",
+    type: "github",
+    label: "GitHub",
+    value: "https://github.com/alex-sampaio",
+    iconName: "github",
   },
-  ]
-
+];
   

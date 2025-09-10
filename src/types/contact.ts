@@ -13,6 +13,5 @@ export interface Contact {
   type: ContactMethodType;
   iconName?: string;
   value: string;
-  href: string;
-  ariaLabel: string;
+  label: string;
 }
