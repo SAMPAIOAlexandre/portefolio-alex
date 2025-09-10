@@ -1,7 +1,18 @@
+export type ContactMethodType =
+  | "email"
+  | "phone"
+  | "linkedin"
+  | "github"
+  | "website"
+  | "x"
+  | "other";
+
+
 export interface Contact {
-  id: number;
-  type: string;
+  id: string;
+  type: ContactMethodType;
+  iconName?: string;
   value: string;
   href: string;
-  ariaLabel?: string;
+  ariaLabel: string;
 }
