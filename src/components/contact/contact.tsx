@@ -1,6 +1,6 @@
 import { Title, Paragraph } from "@/components/typographie";
 import { Section } from "@/components/section";
-import { contactsData } from "@/components/contact/contactsData";
+import { contactMethods } from "@/components/contact/contactsData";
 import React from "react";
 
 
@@ -16,7 +16,7 @@ export const Contact: React.FC = () => {
       </div>
       
       <ul className="mx-auto flex w-full max-w-3xl flex-col items-center gap-4">
-        {contactsData.map((contact) => (
+        {contactMethods.map((contact) => (
           <li key={contact.id} className="w-full">
             <a
               href={contact.href}
