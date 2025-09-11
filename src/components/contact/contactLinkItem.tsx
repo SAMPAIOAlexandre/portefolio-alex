@@ -3,19 +3,20 @@ import type { Contact as ContactMethod } from "@/types/contact";
 import { contactMethods } from "@/components/contact/contactsData";
 
 
-
+// create clickable links for each contact method
 function getHref(m: ContactMethod): string {
   switch (m.type) {
     case "email":
       return `mailto:${m.value}`;
     case "phone":
+      // if later i want to add phone number
       return `tel:${m.value}`;
     default:
       return m.value;
   }
 }
 
-
+// create display value for each contact method
 function getDisplayValue(m: ContactMethod): string {
   if (m.type === "email" || m.type === "phone") return m.value;
   try {
@@ -26,10 +27,8 @@ function getDisplayValue(m: ContactMethod): string {
   }
 }
 
-function cn(...classes: Array<string | false | null | undefined>) {
-  return classes.filter(Boolean).join(" ");
-}
 
+// badge styles and icons by contact type
 const badgeByType: Record<
   ContactMethod["type"],
   { wrapper: string; icon: React.ElementType }
@@ -44,6 +43,8 @@ const badgeByType: Record<
 };
 
 
+
+// type for the props
 type Props = { method: ContactMethod };
 
 export const ContactLinkItem: React.FC<Props> = ({ method }) => {
@@ -52,24 +53,23 @@ export const ContactLinkItem: React.FC<Props> = ({ method }) => {
   const meta = badgeByType[method.type] ?? badgeByType.other;
   const Icon = meta.icon;
 
-  return (
+ return (
     <li>
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={cn(
-          "grid grid-cols-[auto_1fr] items-start gap-3 rounded-lg px-3 py-3 transition-colors",
-          "hover:bg-accent/30 focus:bg-accent/30 outline-none",
+        className={
+          "grid grid-cols-[auto_1fr] items-start gap-3 rounded-lg px-3 py-3 transition-colors " +
+          "hover:bg-accent/30 focus:bg-accent/30 outline-none " +
           "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-        )}
+        }
         aria-label={`${method.label} – ${display}`}
       >
         <span
-          className={cn(
-            "flex h-9 w-9 items-center justify-center rounded-md",
-            meta.wrapper
-          )}
+          className={
+            "flex h-9 w-9 items-center justify-center rounded-md " + meta.wrapper
+          }
           aria-hidden="true"
         >
           <Icon className="h-5 w-5" />
@@ -85,8 +85,6 @@ export const ContactLinkItem: React.FC<Props> = ({ method }) => {
     </li>
   );
 };
-
-/* ---------- (optionnel) Liste complète prête à l’emploi ---------- */
 
 export const ContactLinksList: React.FC = () => (
   <ul className="space-y-1">

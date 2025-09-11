@@ -14,12 +14,10 @@ export default function Home() {
         <Projects />
         <Experiences />
         <Skills />
-       
       </main>
 
       <footer >
          <Contact />
-         
       </footer>
     </>
   );
