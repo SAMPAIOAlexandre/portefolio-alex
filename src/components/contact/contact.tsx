@@ -1,6 +1,8 @@
 import { Title, Paragraph } from "@/components/typographie";
 import { Section } from "@/components/section";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ContactLinksList } from "./contactLinkItem";
+import {ContactConnectRow} from "./contactConnectCard";
 import React from "react";
 
 
