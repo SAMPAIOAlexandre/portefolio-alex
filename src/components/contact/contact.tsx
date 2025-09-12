@@ -8,16 +8,35 @@ import React from "react";
 
 export const Contact: React.FC = () => {
   return (
-    <Section className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl text-center">
+   <Section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl text-center mb-8">
         <Title as="h2">Contact</Title>
         <Paragraph className="mt-2">
-          N’hésitez pas à me contacter via les moyens suivants :
+          Intéressé·e par une collaboration ou un échange ? Voici comment me joindre.
         </Paragraph>
       </div>
 
-      <div className="mx-auto w-full max-w-3xl">
-        <ContactLinksList />
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <Card className="rounded-2xl border-border/50 bg-card/40 backdrop-blur">
+          <CardHeader>
+            <CardTitle className="text-xl">Contact Info</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ContactLinksList />
+          </CardContent>
+        </Card>
+
+        <Card className="rounded-2xl border-border/50 bg-card/40 backdrop-blur">
+          <CardHeader>
+            <CardTitle className="text-xl">Let’s Connect</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <Paragraph>
+              Suis‑moi ou écris‑moi sur tes plateformes préférées.
+            </Paragraph>
+            <ContactConnectRow />
+          </CardContent>
+        </Card>
       </div>
     </Section>
   );

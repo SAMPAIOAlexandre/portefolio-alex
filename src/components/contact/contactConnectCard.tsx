@@ -44,9 +44,9 @@ const iconTint: Record<ContactMethod["type"], string> = {
 };
 
 export const ContactConnectRow: React.FC = () => {
-  const social = contactMethods.filter((m) =>
-    ["linkedin", "github", "website", "x"].includes(m.type)
-  );
+ const social = contactMethods.filter((m) =>
+  ["email", "phone", "linkedin", "github", "website", "x"].includes(m.type)
+);
 
   return (
     <div className="flex flex-wrap items-center gap-3">
