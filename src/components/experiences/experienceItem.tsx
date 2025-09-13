@@ -4,12 +4,6 @@ import { Experience } from "@/types/experiences";
 import { Title, Paragraph } from "@/components/typographie";
 
 type ExperienceItemProps = Experience;
-function formatMonthYear(iso: string) {
-  const d = new Date(iso);
-  return new Intl.DateTimeFormat("fr-FR", { month: "short", year: "numeric" })
-    .format(d)
-    .replace(".", "");
-}
 
 export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   title,
