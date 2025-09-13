@@ -11,9 +11,6 @@ export const Contact: React.FC = () => {
    <Section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center mb-8">
         <Title as="h2">Contact</Title>
-        <Paragraph className="mt-2">
-          Intéressé·e par une collaboration ou un échange ? Voici comment me joindre.
-        </Paragraph>
       </div>
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
