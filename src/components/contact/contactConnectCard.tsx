@@ -1,7 +1,14 @@
 import * as React from "react";
 import { contactMethods } from "@/components/contact/contactsData";
 import type { Contact as ContactMethod } from "@/types/contact";
-import { Mail, Phone, Github, Linkedin, Globe, Link as LinkIcon } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Github,
+  Linkedin,
+  Globe,
+  Link as LinkIcon,
+} from "lucide-react";
 
 function getHref(m: ContactMethod): string {
   switch (m.type) {
@@ -44,9 +51,9 @@ const iconTint: Record<ContactMethod["type"], string> = {
 };
 
 export const ContactConnectRow: React.FC = () => {
- const social = contactMethods.filter((m) =>
-  ["email", "phone", "linkedin", "github", "website", "x"].includes(m.type)
-);
+  const social = contactMethods.filter((m) =>
+    ["email", "phone", "linkedin", "github", "website", "x"].includes(m.type)
+  );
 
   return (
     <div className="flex flex-wrap items-center gap-3">
@@ -63,7 +70,7 @@ export const ContactConnectRow: React.FC = () => {
             rel="noopener noreferrer"
             aria-label={`Ouvrir ${m.label}`}
             title={m.label}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent/20 transition-colors hover:bg-accent/40 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="focus-visible:ring-ring inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent/20 outline-none transition-colors hover:bg-accent/40 focus-visible:ring-2 focus-visible:ring-offset-2"
           >
             <Icon className={`h-5 w-5 ${tint}`} />
             <span className="sr-only">{m.label}</span>

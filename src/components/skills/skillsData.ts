@@ -74,14 +74,14 @@ export const skillsData: SkillCategory[] = [
       },
       {
         id: 9,
-        title:" GitHub",
+        title: " GitHub",
         image: { src: "/skills/github.svg", alt: "Logo GitHub" },
       },
       {
         id: 10,
         title: "Postman",
         image: { src: "/skills/postman.svg", alt: "Logo Postman" },
-      }
+      },
     ],
   },
 ];

@@ -1,7 +1,13 @@
-import { Mail, Phone, Github, Linkedin, Globe, Link as LinkIcon } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Github,
+  Linkedin,
+  Globe,
+  Link as LinkIcon,
+} from "lucide-react";
 import type { Contact as ContactMethod } from "@/types/contact";
 import { contactMethods } from "@/components/contact/contactsData";
-
 
 // create clickable links for each contact method
 function getHref(m: ContactMethod): string {
@@ -27,22 +33,19 @@ function getDisplayValue(m: ContactMethod): string {
   }
 }
 
-
 // badge styles and icons by contact type
 const badgeByType: Record<
   ContactMethod["type"],
   { wrapper: string; icon: React.ElementType }
 > = {
-  email:    { wrapper: "bg-emerald-500/15 text-emerald-400", icon: Mail },
-  phone:    { wrapper: "bg-teal-500/15 text-teal-400",       icon: Phone },
-  github:   { wrapper: "bg-fuchsia-500/15 text-fuchsia-400", icon: Github },
-  linkedin: { wrapper: "bg-sky-500/15 text-sky-400",         icon: Linkedin },
-  website:  { wrapper: "bg-indigo-500/15 text-indigo-400",   icon: Globe },
-  x:        { wrapper: "bg-neutral-500/15 text-neutral-400", icon: LinkIcon },
-  other:    { wrapper: "bg-zinc-500/15 text-zinc-400",       icon: LinkIcon },
+  email: { wrapper: "bg-emerald-500/15 text-emerald-400", icon: Mail },
+  phone: { wrapper: "bg-teal-500/15 text-teal-400", icon: Phone },
+  github: { wrapper: "bg-fuchsia-500/15 text-fuchsia-400", icon: Github },
+  linkedin: { wrapper: "bg-sky-500/15 text-sky-400", icon: Linkedin },
+  website: { wrapper: "bg-indigo-500/15 text-indigo-400", icon: Globe },
+  x: { wrapper: "bg-neutral-500/15 text-neutral-400", icon: LinkIcon },
+  other: { wrapper: "bg-zinc-500/15 text-zinc-400", icon: LinkIcon },
 };
-
-
 
 // type for the props
 type Props = { method: ContactMethod };
@@ -53,7 +56,7 @@ export const ContactLinkItem: React.FC<Props> = ({ method }) => {
   const meta = badgeByType[method.type] ?? badgeByType.other;
   const Icon = meta.icon;
 
- return (
+  return (
     <li>
       <a
         href={href}
@@ -61,14 +64,15 @@ export const ContactLinkItem: React.FC<Props> = ({ method }) => {
         rel="noopener noreferrer"
         className={
           "grid grid-cols-[auto_1fr] items-start gap-3 rounded-lg px-3 py-3 transition-colors " +
-          "hover:bg-accent/30 focus:bg-accent/30 outline-none " +
-          "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          "outline-none hover:bg-accent/30 focus:bg-accent/30" +
+          "focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2"
         }
         aria-label={`${method.label} – ${display}`}
       >
         <span
           className={
-            "flex h-9 w-9 items-center justify-center rounded-md " + meta.wrapper
+            "flex h-9 w-9 items-center justify-center rounded-md " +
+            meta.wrapper
           }
           aria-hidden="true"
         >
@@ -77,7 +81,7 @@ export const ContactLinkItem: React.FC<Props> = ({ method }) => {
 
         <span className="min-w-0">
           <span className="block font-semibold leading-5">{method.label}</span>
-          <span className="block truncate text-sm text-muted-foreground">
+          <span className="text-muted-foreground block truncate text-sm">
             {display}
           </span>
         </span>

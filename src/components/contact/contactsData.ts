@@ -1,5 +1,4 @@
-import { Contact } from './../../types/contact';
-
+import { Contact } from "./../../types/contact";
 
 export const contactMethods: Contact[] = [
   {
@@ -24,4 +23,3 @@ export const contactMethods: Contact[] = [
     iconName: "github",
   },
 ];
-  

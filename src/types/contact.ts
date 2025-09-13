@@ -7,7 +7,6 @@ export type ContactMethodType =
   | "x"
   | "other";
 
-
 export interface Contact {
   id: string;
   type: ContactMethodType;
