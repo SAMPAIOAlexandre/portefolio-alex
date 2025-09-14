@@ -42,7 +42,7 @@ export const skillsData: SkillCategory[] = [
         id: 5,
         title: "Express",
         image: { src: "/skills/express.svg", alt: "Logo Express" },
-        lightBg: true
+        lightBg: true,
       },
     ],
   },
@@ -77,7 +77,7 @@ export const skillsData: SkillCategory[] = [
         id: 9,
         title: " GitHub",
         image: { src: "/skills/github.svg", alt: "Logo GitHub" },
-        lightBg: true
+        lightBg: true,
       },
       {
         id: 10,
