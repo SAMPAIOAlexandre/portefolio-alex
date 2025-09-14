@@ -5,6 +5,7 @@ export interface Skill {
     src: string;
     alt: string;
   };
+  lightBg?: boolean;
 }
 
 export interface SkillCategory {

@@ -35,18 +35,29 @@ export const Skills: React.FC = () => {
 
             <ul className="flex flex-wrap gap-x-8 gap-y-4">
               {category.skills.map((skill) => (
-                <li
-                  key={skill.id}
-                  className="inline-flex items-center gap-2 text-[15px] font-semibold opacity-90 transition hover:opacity-100"
-                >
-                  <img
-                    src={skill.image.src}
-                    alt=""
-                    className="h-5 w-5 object-contain"
-                    aria-hidden="true"
-                  />
-                  <span>{skill.title}</span>
-                </li>
+<li
+  key={skill.id}
+  className="inline-flex items-center gap-2 text-[15px] font-semibold opacity-90 transition hover:opacity-100"
+>
+  { (skill as any).lightBg ? (
+    <span className="inline-flex items-center justify-center rounded-[4px] bg-white px-0.5 py-0.5">
+      <img
+        src={skill.image.src}
+        alt=""
+        className="h-5 w-5 object-contain"
+        aria-hidden="true"
+      />
+    </span>
+  ) : (
+    <img
+      src={skill.image.src}
+      alt=""
+      className="h-5 w-5 object-contain"
+      aria-hidden="true"
+    />
+  )}
+  <span>{skill.title}</span>
+</li>
               ))}
             </ul>
           </div>
