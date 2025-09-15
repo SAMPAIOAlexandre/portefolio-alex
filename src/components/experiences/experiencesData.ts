@@ -4,7 +4,7 @@ export const experiencesData: Experience[] = [
   {
     id: 1,
     title: "Déclarant en douane",
-    poste: "Référent ",
+    poste: "Référent équipe apres-midi",
     description:
       "Gestion des opérations douanières, conformité réglementaire et coordination avec les parties prenantes pour assurer le bon déroulement des processus d'importation et d'exportation.",
     image: {
@@ -12,7 +12,7 @@ export const experiencesData: Experience[] = [
       alt: "logo de La Poste",
       priority: true,
     },
-    startDate: "2022-01",
+    startDate: "2021-05",
     endDate: null,
   },
   {
@@ -26,8 +26,8 @@ export const experiencesData: Experience[] = [
       alt: "logo de La Poste",
       priority: true,
     },
-    startDate: "2021-06",
-    endDate: "2021-12",
+    startDate: "2025-05",
+    endDate: "2025-05",
   },
   {
     id: 3,
@@ -40,8 +40,8 @@ export const experiencesData: Experience[] = [
       alt: "logo de Ynov",
       priority: true,
     },
-    startDate: "2020-06",
-    endDate: "2020-08",
+    startDate: "2024-11",
+    endDate: "2025-01",
   },
 ];
 export default experiencesData;
