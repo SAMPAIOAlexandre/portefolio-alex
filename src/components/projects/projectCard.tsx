@@ -12,6 +12,7 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Button } from "../ui/button";
 
 type ProjectCardProps = Project;
 
@@ -27,23 +28,34 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const primaryTech = tech?.slice(0, 3) ?? [];
   const remainingTech = tech && tech.length > 3 ? tech.slice(3) : [];
 
-  return (
-    <article className="flex flex-col rounded-lg border p-4 shadow transition hover:shadow-lg">
-      <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded">
-        <Image
-          src={image.src}
-          alt={image.alt}
-          fill
-          className="object-contain"
-          sizes="(max-width: 768px) 100vw, 33vw"
-          priority={image.priority}
-        />
-      </div>
+return (
+    <article
+      className="flex flex-col rounded-lg border p-4 shadow transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg"
+      aria-labelledby={`${title}-heading`}
+    >
+<div className="relative mb-4 h-60 overflow-hidden rounded bg-muted">
+  <div className="grid h-full w-full place-items-center">
+    <div className="relative h-[80%] w-[85%]">
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        className="object-contain"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        priority={image.priority}
+      />
+    </div>
+  </div>
+</div>
 
-      <h3 className="mb-2 text-lg font-semibold">{title}</h3>
+      <h3 id={`${title}-heading`} className="mb-2 text-lg font-semibold">
+        {title}
+      </h3>
 
       {description && (
-        <p className="mb-4 line-clamp-3 text-sm text-gray-600">{description}</p>
+        <p className="mb-4 line-clamp-3 text-sm text-muted-foreground">
+          {description}
+        </p>
       )}
 
       {tech && tech.length > 0 && (
@@ -57,7 +69,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </li>
           ))}
           {remainingTech.length > 0 && (
-            <li className="bg-muted text-muted-foreground rounded px-2 py-1 text-xs">
+            <li className="rounded bg-muted px-2 py-1 text-xs text-muted-foreground">
               +{remainingTech.length}
             </li>
           )}
@@ -66,45 +78,50 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
       <div className="mt-auto flex flex-wrap items-center gap-2">
         {links?.demo && (
-          <Link
-            href={links.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded bg-blue-500 px-3 py-1 text-sm text-white hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-            aria-label={`Voir la démo de ${title}`}
-          >
-            Demo
-          </Link>
+          <Button asChild size="sm">
+            <Link
+              href={links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Voir la démo de ${title}`}
+            >
+              Demo
+            </Link>
+          </Button>
         )}
+
         {links?.code && (
-          <Link
-            href={links.code}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded bg-gray-800 px-3 py-1 text-sm text-white hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-            aria-label={`Voir le code de ${title}`}
-          >
-            Code
-          </Link>
+          <Button asChild size="sm" variant="secondary">
+            <Link
+              href={links.code}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Voir le code de ${title}`}
+            >
+              Code
+            </Link>
+          </Button>
         )}
 
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <button
+            <Button
               type="button"
-              className="ml-auto rounded border px-3 py-1 text-sm hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+              size="sm"
+              variant="outline"
               aria-haspopup="dialog"
               aria-label={`Voir plus de détails sur ${title}`}
+              className="ml-auto"
             >
               Voir plus
-            </button>
+            </Button>
           </DialogTrigger>
 
           <DialogContent className="max-w-2xl">
             <DialogHeader>
               <DialogTitle>{title}</DialogTitle>
               {description && (
-                <DialogDescription className="text-muted-foreground mt-1 space-y-2 text-sm leading-relaxed">
+                <DialogDescription className="mt-1 space-y-2 text-sm leading-relaxed text-muted-foreground">
                   {description.split("\n").map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
@@ -112,7 +129,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               )}
             </DialogHeader>
 
-            <div className="relative mt-2 aspect-[16/9] overflow-hidden rounded">
+            <div className="relative mt-2 h-72 overflow-hidden rounded bg-muted p-4">
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -142,24 +159,26 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             {(links?.demo || links?.code) && (
               <div className="mt-4 flex flex-wrap gap-2">
                 {links?.demo && (
-                  <Link
-                    href={links.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded bg-blue-500 px-3 py-1.5 text-sm text-white hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-                  >
-                    Ouvrir la démo
-                  </Link>
+                  <Button asChild size="sm">
+                    <Link
+                      href={links.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ouvrir la démo
+                    </Link>
+                  </Button>
                 )}
                 {links?.code && (
-                  <Link
-                    href={links.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded bg-gray-800 px-3 py-1.5 text-sm text-white hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-                  >
-                    Voir le code
-                  </Link>
+                  <Button asChild size="sm" variant="secondary">
+                    <Link
+                      href={links.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Voir le code
+                    </Link>
+                  </Button>
                 )}
               </div>
             )}
@@ -182,3 +201,4 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     </article>
   );
 };
+
