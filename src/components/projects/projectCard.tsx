@@ -30,23 +30,25 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
 return (
     <article
-      className="flex flex-col rounded-lg border p-4 shadow transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg"
+      className="group flex flex-col rounded-lg border p-4 shadow transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg "
       aria-labelledby={`${title}-heading`}
     >
-<div className="relative mb-4 h-60 overflow-hidden rounded bg-muted">
-  <div className="grid h-full w-full place-items-center">
-    <div className="relative h-[80%] w-[85%]">
-      <Image
-        src={image.src}
-        alt={image.alt}
-        fill
-        className="object-contain"
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        priority={image.priority}
-      />
-    </div>
-  </div>
-</div>
+      <div className="relative mb-4 h-60 overflow-hidden rounded bg-muted">
+        <div className="grid h-full w-full place-items-center">
+          <div className="relative h-[80%] w-[85%] transition-transform duration-200 group-hover:scale-[1.02]">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-contain"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              priority={image.priority}
+            />
+          </div>
+        </div>
+
+        <div className="pointer-events-none absolute inset-0 rounded transition-shadow duration-200 group-hover:shadow-md" />
+      </div>
 
       <h3 id={`${title}-heading`} className="mb-2 text-lg font-semibold">
         {title}
@@ -63,13 +65,13 @@ return (
           {primaryTech.map((t) => (
             <li
               key={t}
-              className="rounded bg-secondary px-2 py-1 text-xs text-secondary-foreground"
+              className="rounded-2xl border bg-secondary/60 px-2.5 py-1 text-xs text-secondary-foreground/90"
             >
               {t}
             </li>
           ))}
           {remainingTech.length > 0 && (
-            <li className="rounded bg-muted px-2 py-1 text-xs text-muted-foreground">
+            <li className="rounded-2xl border bg-muted px-2.5 py-1 text-xs text-muted-foreground">
               +{remainingTech.length}
             </li>
           )}
@@ -83,7 +85,7 @@ return (
               href={links.demo}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Voir la démo de ${title}`}
+              aria-label={`Open demo for ${title}`}
             >
               Demo
             </Link>
@@ -96,7 +98,7 @@ return (
               href={links.code}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Voir le code de ${title}`}
+              aria-label={`View source code for ${title}`}
             >
               Code
             </Link>
@@ -110,10 +112,10 @@ return (
               size="sm"
               variant="outline"
               aria-haspopup="dialog"
-              aria-label={`Voir plus de détails sur ${title}`}
+              aria-label={`View more details about ${title}`}
               className="ml-auto"
             >
-              Voir plus
+              Details
             </Button>
           </DialogTrigger>
 
@@ -129,15 +131,19 @@ return (
               )}
             </DialogHeader>
 
-            <div className="relative mt-2 h-72 overflow-hidden rounded bg-muted p-4">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 768px"
-                priority={false}
-              />
+            <div className="relative mt-2 h-72 overflow-hidden rounded bg-muted">
+              <div className="grid h-full w-full place-items-center">
+                <div className="relative h-[82%] w-[88%]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    priority={false}
+                  />
+                </div>
+              </div>
             </div>
 
             {tech && tech.length > 0 && (
@@ -147,7 +153,7 @@ return (
                   {tech.map((t) => (
                     <li
                       key={t}
-                      className="rounded bg-secondary px-2 py-1 text-xs text-secondary-foreground"
+                      className="rounded-2xl border bg-secondary/60 px-2.5 py-1 text-xs text-secondary-foreground/90"
                     >
                       {t}
                     </li>
@@ -160,23 +166,15 @@ return (
               <div className="mt-4 flex flex-wrap gap-2">
                 {links?.demo && (
                   <Button asChild size="sm">
-                    <Link
-                      href={links.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Ouvrir la démo
+                    <Link href={links.demo} target="_blank" rel="noopener noreferrer">
+                      Open demo
                     </Link>
                   </Button>
                 )}
                 {links?.code && (
                   <Button asChild size="sm" variant="secondary">
-                    <Link
-                      href={links.code}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Voir le code
+                    <Link href={links.code} target="_blank" rel="noopener noreferrer">
+                      View code
                     </Link>
                   </Button>
                 )}
@@ -188,7 +186,7 @@ return (
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded bg-accent px-2 py-0.5 text-xs text-accent-foreground"
+                    className="rounded-2xl border bg-accent/70 px-2.5 py-0.5 text-xs text-accent-foreground"
                   >
                     {tag}
                   </span>
@@ -201,4 +199,3 @@ return (
     </article>
   );
 };
-
