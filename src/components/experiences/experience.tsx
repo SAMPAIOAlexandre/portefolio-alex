@@ -8,7 +8,7 @@ export const Experiences: React.FC = () => {
 return (
     <Section className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
-        <Title as="h2" id="experiences-heading">Mes Expériences</Title>
+        <Title as="h2" >Mes Expériences</Title>
         <Paragraph className="mt-2">
           Voici un aperçu de mes expériences professionnelles. Chaque expérience
           a contribué à mon développement en tant que développeur web.
@@ -16,7 +16,6 @@ return (
       </div>
 
       <ol
-        aria-labelledby="experiences-heading"
         className="mx-auto flex w-full max-w-5xl flex-col gap-6"
       >
         {experiencesData.map((experience) => (
