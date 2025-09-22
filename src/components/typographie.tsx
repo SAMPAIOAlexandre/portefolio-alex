@@ -9,7 +9,6 @@ type TitleProps = {
 
 export function Title({ children, as = "h1", className = "" }: TitleProps) {
   const Tag = as;
-
   return (
     <Tag className={`font-title text-4xl font-bold ${className}`}>
       {children}

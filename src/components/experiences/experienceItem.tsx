@@ -31,7 +31,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
         "
       >
         <div className="flex items-start">
-          <div className="relative size-12 md:size-14 overflow-hidden rounded-full bg-muted/40 ring-1 ring-border p-1">
+          <div className="relative size-12 md:size-14 overflow-hidden rounded-full bg-muted/40 p-1">
             <Image
               src={image.src}
               alt={image.alt}
