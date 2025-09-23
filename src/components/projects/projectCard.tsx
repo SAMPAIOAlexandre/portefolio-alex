@@ -28,12 +28,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   const primaryTech = tech?.slice(0, 3) ?? [];
   const remainingTech = tech && tech.length > 3 ? tech.slice(3) : [];
 
-return (
+  return (
     <article
-      className="group flex flex-col rounded-lg border p-4 shadow transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg "
+      className="group flex flex-col rounded-lg border p-4 shadow transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg"
       aria-labelledby={`${title}-heading`}
     >
-      <div className="relative mb-4 h-60 overflow-hidden rounded bg-muted">
+      <div className="bg-muted relative mb-4 h-60 overflow-hidden rounded">
         <div className="grid h-full w-full place-items-center">
           <div className="relative h-[80%] w-[85%] transition-transform duration-200 group-hover:scale-[1.02]">
             <Image
@@ -55,7 +55,7 @@ return (
       </h3>
 
       {description && (
-        <p className="mb-4 line-clamp-3 text-sm text-muted-foreground">
+        <p className="text-muted-foreground mb-4 line-clamp-3 text-sm">
           {description}
         </p>
       )}
@@ -71,7 +71,7 @@ return (
             </li>
           ))}
           {remainingTech.length > 0 && (
-            <li className="rounded-2xl border bg-muted px-2.5 py-1 text-xs text-muted-foreground">
+            <li className="bg-muted text-muted-foreground rounded-2xl border px-2.5 py-1 text-xs">
               +{remainingTech.length}
             </li>
           )}
@@ -123,7 +123,7 @@ return (
             <DialogHeader>
               <DialogTitle>{title}</DialogTitle>
               {description && (
-                <DialogDescription className="mt-1 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <DialogDescription className="text-muted-foreground mt-1 space-y-2 text-sm leading-relaxed">
                   {description.split("\n").map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
@@ -131,7 +131,7 @@ return (
               )}
             </DialogHeader>
 
-            <div className="relative mt-2 h-72 overflow-hidden rounded bg-muted">
+            <div className="bg-muted relative mt-2 h-72 overflow-hidden rounded">
               <div className="grid h-full w-full place-items-center">
                 <div className="relative h-[82%] w-[88%]">
                   <Image
@@ -166,14 +166,22 @@ return (
               <div className="mt-4 flex flex-wrap gap-2">
                 {links?.demo && (
                   <Button asChild size="sm">
-                    <Link href={links.demo} target="_blank" rel="noopener noreferrer">
+                    <Link
+                      href={links.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Open demo
                     </Link>
                   </Button>
                 )}
                 {links?.code && (
                   <Button asChild size="sm" variant="secondary">
-                    <Link href={links.code} target="_blank" rel="noopener noreferrer">
+                    <Link
+                      href={links.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       View code
                     </Link>
                   </Button>

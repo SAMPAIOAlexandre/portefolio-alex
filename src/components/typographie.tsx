@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 
-
 type TitleProps = {
   children: ReactNode;
   as?: "h1" | "h2" | "h3";

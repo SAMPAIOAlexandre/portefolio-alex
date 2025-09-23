@@ -32,7 +32,7 @@ export const experiencesData: Experience[] = [
   {
     id: 3,
     title: "Developpeur Full Stack",
-    poste: "Stagiaire", 
+    poste: "Stagiaire",
     description:
       "Développement d'une application web de gestion de tâches avec React pour le frontend et Node.js pour le backend.",
     image: {

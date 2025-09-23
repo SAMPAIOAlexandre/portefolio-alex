@@ -12,26 +12,22 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
   startDate,
   endDate,
 }) => {
-   const fmt = (iso: string) =>
+  const fmt = (iso: string) =>
     new Date(iso.length === 7 ? `${iso}-01` : iso)
       .toLocaleDateString("fr-FR", { month: "short", year: "numeric" })
       .replace(".", "");
 
-  const normalizeDateTime = (iso: string) => (iso.length === 7 ? `${iso}` : iso);
+  const normalizeDateTime = (iso: string) =>
+    iso.length === 7 ? `${iso}` : iso;
 
   const startLabel = fmt(startDate);
   const endLabel = endDate ? fmt(endDate) : "Présent";
 
   return (
     <article className="pb-2 pt-0.5">
-      <div
-        className="
-          grid gap-x-6 gap-y-2
-          md:[grid-template-columns:auto_1fr_auto] md:items-center
-        "
-      >
+      <div className="grid gap-x-6 gap-y-2 md:items-center md:[grid-template-columns:auto_1fr_auto]">
         <div className="flex items-start">
-          <div className="relative size-12 md:size-14 overflow-hidden rounded-full bg-muted/40 p-1">
+          <div className="bg-muted/40 relative size-12 overflow-hidden rounded-full p-1 md:size-14">
             <Image
               src={image.src}
               alt={image.alt}
@@ -54,13 +50,7 @@ export const ExperienceItem: React.FC<ExperienceItemProps> = ({
           )}
         </div>
 
-        <div
-          className="
-            tabular-nums text-sm text-muted-foreground
-            whitespace-nowrap text-right md:col-auto
-            min-w-[9rem]
-          "
-        >
+        <div className="text-muted-foreground min-w-[9rem] whitespace-nowrap text-right text-sm tabular-nums md:col-auto">
           <time dateTime={normalizeDateTime(startDate)}>{startLabel}</time>{" "}
           <span aria-hidden="true">—</span>{" "}
           {endDate ? (
